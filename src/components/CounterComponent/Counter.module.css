@@ -1,0 +1,10 @@
+.container {
+	width: 150px;
+	border-radius: 30px;
+	padding: 18px;
+	background: #eaedf2;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}

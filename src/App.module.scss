@@ -1,0 +1,12 @@
+.app {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	&:not(:last-child){
+		margin: 100px auto 0;
+	}
+	column-gap: 20px;
+}
+	

@@ -1,0 +1,31 @@
+.button {
+	align-self: center;
+	width: 50px;
+	background: #eaedf2;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+	box-shadow: inset 3px 4px 7px white, inset -3px -4px 3px #cccfd4;
+	cursor: pointer;
+	transition: all linear 0.05s;
+	&:active {
+		transition: all linear 0.05s;
+		box-shadow: inset 3px 4px 7px #cccfd4, inset -3px -4px 3px white;
+	}
+}
+.button_disbled {
+	align-self: center;
+	width: 50px;
+	background: #cccfd4;
+	border: none;
+	padding: 7px 10px;
+	font-size: 14px;
+	color: #5e5a57;
+	outline: none;
+	caret-color: #5e5a57;
+	border-radius: 13px;
+}

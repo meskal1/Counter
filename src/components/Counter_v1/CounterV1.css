@@ -1,0 +1,8 @@
+.counterV1 {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 100px auto 0;
+	column-gap: 20px;
+}

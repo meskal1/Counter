@@ -1,0 +1,14 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	font-size: 14px;
+	border-radius: 30px;
+	padding: 18px;
+	background: #eaedf2;
+	.blocks_set_input_values{
+		display: flex;
+		flex-direction: column;
+		margin: 0px 0px 10px 0px;
+	}
+}
