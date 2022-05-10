@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Counter } from "../CounterComponent/Counter";
 import { CounterSettings } from "../CounterSettings/CounterSettings";
-import './CounterV1.css'
+import s from './CounterV1.module.scss'
 
 function CounterV1() {
 	const [maxNumber, setMaxNumber] = useState(Number(localStorage.getItem('maxNumber')) || 1)
@@ -50,27 +50,33 @@ function CounterV1() {
 	const onKeyPressInput = () => {
 		if (isDisabledSettingsButton === false) onClickSetButton();
 	};
+	const onClickResetButtonCounter = () => {
+		setCounter(startNumber)
+	};
 	return (
 		<>
-			<div className="counterV1">
-				<CounterSettings
-					maxNumber={maxNumber}
-					startNumber={startNumber}
-					isDisabled={isDisabledSettingsButton}
-					onChangeInput={onChangeInput}
-					onClickSetButton={onClickSetButton}
-					onFocusInput={onFocusInput}
-					onBlurInput={onBlurInput}
-					onKeyPressInput={onKeyPressInput}
-					isDisabledSettingsButton={isDisabledSettingsButton} />
-				<Counter
-					counter={counter}
-					maxNumber={maxNumber}
-					startNumber={startNumber}
-					isDisabled={isDisabledCounterButton}
-					setCounter={setCounter}
-					increaseCounter={increaseCounter}
-					tabloMessage={tabloMessage} />
+			<div className={s.counterV1}>
+				Counter V1 with localStorage
+				<div className={s.container}>
+					<CounterSettings
+						maxNumber={maxNumber}
+						startNumber={startNumber}
+						isDisabled={isDisabledSettingsButton}
+						onChangeInput={onChangeInput}
+						onClickSetButton={onClickSetButton}
+						onFocusInput={onFocusInput}
+						onBlurInput={onBlurInput}
+						onKeyPressInput={onKeyPressInput}
+						isDisabledSettingsButton={isDisabledSettingsButton} />
+					<Counter
+						counter={counter}
+						maxNumber={maxNumber}
+						startNumber={startNumber}
+						isDisabled={isDisabledCounterButton}
+						setCounter={onClickResetButtonCounter}
+						increaseCounter={increaseCounter}
+						tabloMessage={tabloMessage} />
+				</div>
 			</div>
 		</>
 	);

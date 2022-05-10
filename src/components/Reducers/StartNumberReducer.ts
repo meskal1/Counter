@@ -1,21 +1,19 @@
 import React from 'react';
 
-type startNumberReducerType = startNumberACType
-export const startNumberReducer = (state: number, action: startNumberReducerType): number => {
+const initialState = 0;
+
+type ActionType = OnChangeInputACType
+export const startNumberReducer = (state: number = initialState, action: ActionType): number => {
 	switch (action.type) {
-		case 'ON-CHANGE-INPUT': {
-			return action.payload.inputValue;
-		}
+		case 'ON_CHANGE_INPUT_START_NUMBER': return action.payload.inputValue;
 		default: return state;
 	}
 };
 
-type startNumberACType = ReturnType<typeof startNumberAC>
-export const startNumberAC = (inputValue: number) => {
+type OnChangeInputACType = ReturnType<typeof onChangeInputStartNumAC>
+export const onChangeInputStartNumAC = (inputValue: number) => {
 	return {
-		type: 'ON-CHANGE-INPUT',
-		payload: {
-			inputValue: inputValue
-		}
+		type: 'ON_CHANGE_INPUT_START_NUMBER',
+		payload: { inputValue }
 	} as const
-};  
+};

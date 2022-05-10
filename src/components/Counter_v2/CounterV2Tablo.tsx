@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../Button/Button";
-import s from './CounterTablo.module.scss'
+import s from './CounterV2Tablo.module.scss'
 import { Tablo } from "../Tablo/Tablo";
 
 type CounterTabloType = {
@@ -8,7 +8,7 @@ type CounterTabloType = {
 	maxNumber: number
 	startNumber: number
 	isDisabled: boolean
-	setCounter: (counter: number) => void
+	setCounter: () => void
 	increaseCounter: () => void
 	tabloMessage: string
 	setChangeDisplayStatus: (changeDisplayStatusValue: boolean) => void
@@ -21,7 +21,7 @@ export const CounterTablo: React.FC<CounterTabloType> = ({
 		increaseCounter()
 	};
 	const onClickResetButton = () => {
-		setCounter(startNumber)
+		setCounter()
 	}
 	const onClickButtonSet = () => {
 		setChangeDisplayStatus(true)

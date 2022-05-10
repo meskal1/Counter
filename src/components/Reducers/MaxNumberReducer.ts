@@ -1,21 +1,19 @@
 import React from 'react';
 
-type MaxNumberReducerType = MaxNumberACType
-export const MaxNumberReducer = (state: number, action: MaxNumberReducerType): number => {
+const initialState = 1;
+
+type ActionType = OnChangeInputMaxNumACType
+export const maxNumberReducer = (state: number = initialState, action: ActionType): number => {
 	switch (action.type) {
-		case 'ON-CHANGE-INPUT': {
-			return action.payload.inputValue;
-		}
+		case 'ON_CHANGE_INPUT_MAX_NUMBER': return action.payload.inputValue;
 		default: return state;
 	}
 };
 
-type MaxNumberACType = ReturnType<typeof MaxNumberAC>
-export const MaxNumberAC = (inputValue: number) => {
+type OnChangeInputMaxNumACType = ReturnType<typeof onChangeInputMaxNumAC>
+export const onChangeInputMaxNumAC = (inputValue: number) => {
 	return {
-		type: 'ON-CHANGE-INPUT',
-		payload: {
-			inputValue: inputValue
-		}
+		type: 'ON_CHANGE_INPUT_MAX_NUMBER',
+		payload: { inputValue },
 	} as const
 };
