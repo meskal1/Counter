@@ -4,9 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
-/.idea
+
 # testing
 /coverage
+*.snap
 
 # production
 /build
@@ -21,3 +22,19 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
+/.eslintcache
+package-lock.json
+
+### IntelliJ IDEA ###
+.idea
+
+# VSCode
+.vscode
+
+# My own
+webpack.config.js
+deploy.sh
+craco.config.js
+compress-cra.json
+.storybook
