@@ -57,8 +57,7 @@ export const CounterV2 = () => {
   return (
     <>
       <div className={s.counterV2}>
-        <span>Counter V2 with Redux, localStorage and some tests</span>
-        <span>Change values by arrows on keyboard</span>
+        <span>With Redux, localStorage and some tests</span>
         {changeDisplayStatus ? (
           <CounterSettings
             maxNumber={maxNumber}

@@ -31,8 +31,9 @@ export const Input: React.FC<InputType> = ({
   const onFocusInputHandler = () => onFocusInput()
   const onBlurInputHandler = () => onBlurInput()
   const onKeyPressInputHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (isDisabledSettingsButton === false && e.key === 'Enter') inputRef.current.blur()
+    else if (e.key === ',' || e.key === 'e') e.preventDefault()
     onKeyPressInput(e)
-    if (isDisabledSettingsButton === false) inputRef.current.blur()
   }
 
   return (

@@ -57,8 +57,7 @@ export const CounterV1 = () => {
   return (
     <>
       <div className={s.counterV1}>
-        <span>Counter V1 with localStorage</span>
-        <span>Change values by arrows on keyboard</span>
+        <span>With localStorage</span>
         <div className={s.container}>
           <CounterSettings
             maxNumber={maxNumber}
